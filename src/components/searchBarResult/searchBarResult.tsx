@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from './SearchBarResult.module.scss';
 
 export interface IProps {
     

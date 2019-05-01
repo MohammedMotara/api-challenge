@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from './CollectionDashbaord.module.scss';
 import SearchBar from '../components/searchBar/searchBar';
 import { fetchBooks, getBooks } from '../reducers/bookReducer';
 import AllResults from '../components/allResults/allResults';
