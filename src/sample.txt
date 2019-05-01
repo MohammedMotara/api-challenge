@@ -1,3 +1,13 @@
+Pseudo code route to get an author from the object below:
+
+"googleBooks.volumeInfo.authors[]"
+
+The value of authors is an array.
+
+Pseudo code route to get to an author (using API function):
+
+fetchBooks("Jane Austen")
+
 {
     "kind": "books#volume",
     "id": "QsZIDgAAQBAJ",

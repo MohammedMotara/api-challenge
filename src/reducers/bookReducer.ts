@@ -7,6 +7,8 @@ export const FETCH_BOOKS = "FETCH_BOOKS";
 export const SUCCESS_FETCH_BOOKS = "SUCCESS_FETCH_BOOKS";
 export const FAILURE_FETCH_BOOKS = "FAILURE_FETCH_BOOKS";
 
+
+
 // action creators
 export const getBooks = (): IGetBooksAction => ({
   type: FETCH_BOOKS
@@ -20,6 +22,9 @@ export const getBooksFailure = (error: Error): IGetBooksFailureAction => ({
   error
 });
 
+
+
+
 export const fetchBooks = (authorName: string) => (dispatch: any) => {
   dispatch(getBooks());
   fetch(
@@ -31,6 +36,7 @@ export const fetchBooks = (authorName: string) => (dispatch: any) => {
     .then(data => dispatch(getBooksSuccess(data.items)))
     .catch(error => dispatch(getBooksFailure(error)));
 };
+
 
 // action interfaces
 
@@ -46,6 +52,7 @@ export interface IGetBooksFailureAction {
   error: Error;
 }
 
+
 // combining action creators
 
 type IBookActions =
@@ -53,17 +60,19 @@ type IBookActions =
   | IGetBooksSuccessAction
   | IGetBooksFailureAction;
 
+
 export interface IBookState {
   books: IBook[];
   error: null | Error;
   loading: boolean;
+
 }
 
-// reducer with initial state
 const initialState: IBookState = {
   books: [],
   error: null,
-  loading: false
+  loading: false,
+
 };
 
 const bookReducer = (state = initialState, action: IBookActions) => {
