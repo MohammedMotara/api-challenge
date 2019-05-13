@@ -1,2 +1,3 @@
 # api-challenge
-Extended React &amp; Redux challenge using simple API call 
+
+This is a repository that contains the code base for a recent challenge. The challenge is to produce a book search site, by using a Google Books API.
